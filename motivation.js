@@ -100,6 +100,8 @@ Module.regsister("motivation", {
 	 */
 	getDom: function() {
 		var wrapper = document.createElement("div");
+        wrapper.className = this.config.classes;
+
 		var quote = document.createElement('span');
 		quote.appendChild(document.createTextNode(this.randomQuote()));
 		wrapper.appendChild(quote);
